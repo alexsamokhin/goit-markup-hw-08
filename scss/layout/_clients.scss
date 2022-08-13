@@ -1,0 +1,46 @@
+.clients {
+    @extend %section;
+}
+
+.clients__title {
+    @extend %title--fz36;
+}
+
+.clients__container {
+    @extend %container;
+}
+
+.clients__list {
+    @extend %reset-list;
+
+    display: flex;
+    gap: 30px;
+    --items: 6;
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.clients__link {
+    @extend %reset-link;
+    
+    display: flex;
+    width: 170px;
+    height: 92px;
+
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #afb1b8;
+
+    transition: color var(--animation), outline var(--animation);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        outline: 1px solid var(--accent-color);
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}

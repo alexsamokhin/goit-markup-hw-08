@@ -1,0 +1,127 @@
+.filter__list {
+    @extend %reset-list;
+
+    margin-bottom: 56px;
+    
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.filter__btn {
+    @extend %reset-btn;
+
+    padding: 6px 22px;
+    
+    // font-weight: 500;
+    // font-size: 16px;
+    // line-height: calc(26 / 16);
+    // letter-spacing: 0.03em;
+    @include fonts(16px, 26px, 500, 0.03em);
+    text-align: center;
+    background-color: var(--light-bg-color);
+    border-radius: 4px;
+
+    transition: background-color var(--animation), color var(--animation), box-shadow var(--animation);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.products {
+    @extend %section;
+}
+
+.products__container {
+    @extend %container
+}
+
+.products__list {
+    @extend %reset-list;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    --items: 9;
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.products__item {
+    transition: box-shadow var(--animation);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }   
+
+    &:hover .products__overlay,
+    &:focus .products__overlay {
+        transform: translateY(0);
+    }
+    
+} 
+
+.products__link {
+    @extend %reset-link;
+}
+
+.products__card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.products__overlay {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    user-select: none;
+
+    transform: translateY(101%);
+    transition: transform var(--animation);
+}
+
+.products__overlay--inner {
+    padding: 63px 24px;
+    
+    // font-size: 18px;
+    // line-height: calc(28 / 18);
+    // letter-spacing: 0.03em;
+    @include fonts(18px, 28px, 400, 0.03em);
+    color: var(--white-color);
+}
+
+.products__wrapper {
+    padding: 20px 24px;
+    
+    border: 1px solid #eeeeee;
+    border-top: none;
+}
+
+.products__title {
+    margin-bottom: 4px;
+    
+    // font-size: 18px;
+    // line-height: calc(36 / 18);
+    // letter-spacing: 0.06em;
+    @include fonts(18px, 36px, 700, 0.06em);
+}
+
+.products__text {
+    // font-size: 16px;
+    // line-height: calc(30 / 16);
+    // letter-spacing: 0.03em;
+    @include fonts(16px, 30px, 400, 0.03em);
+    color: var(--secondary-text-color);
+    
+}
