@@ -264,7 +264,8 @@
     }
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus-visible {
             border-color: var(--white-color);
         }
     }

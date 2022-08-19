@@ -91,6 +91,10 @@
           box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
@@ -207,10 +211,10 @@ img {
   transition: border-color var(--animation), fill var(--animation);
 }
 @media screen and (max-width: 1199px) {
-  .register-form__input:active {
+  .register-form__input:active, .register-form__input:focus-visible {
     border-color: var(--accent-color);
   }
-  .register-form__input:active + .register-form__icon {
+  .register-form__input:active + .register-form__icon, .register-form__input:focus-visible + .register-form__icon {
     fill: var(--accent-color);
   }
 }
@@ -234,7 +238,7 @@ img {
   transition: border-color var(--animation);
 }
 @media screen and (max-width: 1199px) {
-  .register-form__message:active {
+  .register-form__message:active, .register-form__message:focus-visible {
     border-color: var(--accent-color);
   }
 }
@@ -1468,7 +1472,7 @@ img {
   }
 }
 @media screen and (max-width: 1199px) {
-  .subscribe__mail:active {
+  .subscribe__mail:active, .subscribe__mail:focus-visible {
     border-color: var(--white-color);
   }
 }

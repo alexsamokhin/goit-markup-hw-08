@@ -60,11 +60,13 @@
     transition: border-color var(--animation), fill var(--animation);
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus-visible {
             border-color: var(--accent-color);
         }
 
-        &:active + .register-form__icon {
+        &:active +.register-form__icon,
+        &:focus-visible +.register-form__icon {
             fill: var(--accent-color);
         }
     }
@@ -93,7 +95,8 @@
     transition: border-color var(--animation);
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus-visible {
             border-color: var(--accent-color);
         }
     }
