@@ -79,7 +79,8 @@
     transition: background-color var(--animation);
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus {
             background-color: var(--accent-bg-color);
         }
     }

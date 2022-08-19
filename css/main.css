@@ -67,10 +67,17 @@
   letter-spacing: 0.03em;
 }
 
-.products__link, .join__link, .address__phone, .address__mail, .footer__logo--white, .clients__link, .socials__link, .nav__link, .header__phone, .header__mail, .header__logo--black, .mobile__item, .agreement__link {
+.products__link, .join__link, .address__phone, .address__mail, .footer__logo--white, .clients__link, .socials__link, .nav__link, .header__phone, .header__mail, .header__logo--black, .mobile-socilas__link, .mobile__link,
+.mobile-contacts__link, .mobile-contacts__mail, .mobile-contacts__phone, .agreement__link {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+  cursor: not-allowed;
+}
+@media screen and (min-width: 1200px) {
+  .products__link, .join__link, .address__phone, .address__mail, .footer__logo--white, .clients__link, .socials__link, .nav__link, .header__phone, .header__mail, .header__logo--black, .mobile-socilas__link, .mobile__link,
+.mobile-contacts__link, .mobile-contacts__mail, .mobile-contacts__phone, .agreement__link {
+    cursor: pointer;
+  }
 }
 
 .products__list, .filter__list, .join__list, .address__list, .clients__list, .socials__list, .team__list, .doing__list, .descr__list, .nav__list, .header__contacts-list, .mobile__nav {
@@ -80,8 +87,13 @@
 }
 
 .modal__btn, .filter__btn, .subscribe__btn, .hero__btn, .menu__btn, .modal__btn--send {
-  cursor: pointer;
   border: none;
+  cursor: not-allowed;
+}
+@media screen and (min-width: 1200px) {
+  .modal__btn, .filter__btn, .subscribe__btn, .hero__btn, .menu__btn, .modal__btn--send {
+    cursor: pointer;
+  }
 }
 
 *,
@@ -397,7 +409,7 @@ img {
   top: 10px;
   right: 15px;
 }
-.menu__btn:active {
+.menu__btn:active, .menu__btn:focus {
   fill: currentColor;
 }
 
@@ -610,7 +622,7 @@ img {
     padding-bottom: 0;
     padding-top: 21px;
   }
-  .header__mail:active {
+  .header__mail:active, .header__mail:focus {
     color: var(--accent-color);
   }
 }
@@ -649,7 +661,7 @@ img {
     padding-bottom: 21px;
     padding-top: 10px;
   }
-  .header__phone:active {
+  .header__phone:active, .header__phone:focus {
     color: var(--accent-color);
   }
 }
@@ -821,7 +833,7 @@ img {
   transition: background-color var(--animation);
 }
 @media screen and (max-width: 1199px) {
-  .hero__btn:active {
+  .hero__btn:active, .hero__btn:focus {
     background-color: var(--accent-bg-color);
   }
 }
@@ -1172,7 +1184,7 @@ img {
   transition: color var(--animation), outline var(--animation);
 }
 @media screen and (max-width: 1199px) {
-  .clients__link:active {
+  .clients__link:active, .clients__link:focus {
     color: var(--accent-color);
     outline: 1px solid var(--accent-color);
   }
@@ -1496,7 +1508,6 @@ img {
   width: 200px;
   height: 50px;
   padding: 10px 28px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.88;
@@ -1619,7 +1630,7 @@ img {
   outline: 1px solid #eee;
 }
 @media screen and (max-width: 1199px) {
-  .products__item:active, .products__item:focus {
+  .products__item:active, .products__item:hover {
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
@@ -1629,7 +1640,7 @@ img {
     width: 354px;
   }
 }
-.products__item:active .products__overlay, .products__item:focus .products__overlay {
+.products__item:active .products__overlay, .products__item:hover .products__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1670,12 +1681,22 @@ img {
 }
 
 .products__overlay--inner {
-  padding: 63px 24px;
+  padding: 77px 24px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .products__overlay--inner {
+    padding: 47px 24px 77px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__overlay--inner {
+    padding: 63px 24px;
+  }
 }
 
 .products__wrapper {
@@ -1773,12 +1794,11 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
-  cursor: pointer;
   -webkit-transition: fill var(--animation);
   transition: fill var(--animation);
 }
 @media screen and (max-width: 1199px) {
-  .modal__btn:active {
+  .modal__btn:active, .modal__btn:focus {
     fill: var(--accent-color);
   }
 }

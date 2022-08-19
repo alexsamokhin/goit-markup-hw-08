@@ -40,7 +40,10 @@
 %reset-link {
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
+    cursor: not-allowed;
+    @media screen and (min-width: 1200px) {
+        cursor: pointer;
+    }
 }
 
 %reset-list {
@@ -50,6 +53,9 @@
 }
 
 %reset-btn {
-    cursor: pointer;
     border: none;
+    cursor: not-allowed;
+    @media screen and (min-width: 1200px) {
+        cursor: pointer;
+    }
 }

@@ -49,7 +49,8 @@
     transition: color var(--animation), outline var(--animation);
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus {
             color: var(--accent-color);
             outline: 1px solid var(--accent-color);
         }

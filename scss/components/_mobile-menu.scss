@@ -23,7 +23,8 @@
         right: 15px;
     }
 
-    &:active {
+    &:active,
+    &:focus {
         fill: currentColor
     }
 }
@@ -81,8 +82,6 @@
 
 .mobile__item {
     margin-bottom: 32px;
-
-    @extend %reset-link;
 }
 
 .mobile-contacts {
@@ -90,15 +89,17 @@
     flex-direction: column;
 
     &__phone {
+        @extend %reset-link;
         @include fonts(34px, 40px, 500, 0.02em);
         color: #2196F3;
         margin-bottom: 32px;
     }
 
     &__mail {
-    @include fonts(24px, 28px, 500, 0.02em);
-    color: #757575;
-    margin-bottom: 64px;
+        @extend %reset-link;
+        @include fonts(24px, 28px, 500, 0.02em);
+        color: #757575;
+        margin-bottom: 64px;
     }
 }
 
@@ -112,6 +113,7 @@
 
 .mobile__link,
 .mobile-contacts__link {
+        @extend %reset-link;
     @include fonts(40px, 47px, 500, 0.02em);
     color: #212121;  
 }
@@ -128,12 +130,11 @@
     gap: 10px;
 
     &__link {
+        @extend %reset-link;
         @include fonts(18px, 22px, 500, 0.02em);
         color: #2196F3;
     }
 }
-
-
 
 .mobile-socilas__item:not(:last-child) .mobile-socilas__link {
     display: flex;
