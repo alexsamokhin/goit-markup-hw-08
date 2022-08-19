@@ -1562,6 +1562,7 @@ img {
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.03em;
+  color: #212121;
   text-align: center;
   background-color: var(--light-bg-color);
   border-radius: 4px;
@@ -1571,7 +1572,7 @@ img {
   transition: background-color var(--animation), color var(--animation), box-shadow var(--animation), -webkit-box-shadow var(--animation);
 }
 @media screen and (max-width: 1199px) {
-  .filter__btn:active {
+  .filter__btn:active, .filter__btn:focus {
     background-color: var(--accent-color);
     color: var(--white-color);
     -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1618,7 +1619,7 @@ img {
   outline: 1px solid #eee;
 }
 @media screen and (max-width: 1199px) {
-  .products__item:active {
+  .products__item:active, .products__item:focus {
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
@@ -1628,7 +1629,7 @@ img {
     width: 354px;
   }
 }
-.products__item:active .products__overlay {
+.products__item:active .products__overlay, .products__item:focus .products__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }

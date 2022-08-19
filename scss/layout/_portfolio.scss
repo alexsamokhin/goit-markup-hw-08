@@ -29,6 +29,7 @@
     // line-height: calc(26 / 16);
     // letter-spacing: 0.03em;
     @include fonts(16px, 26px, 500, 0.03em);
+    color: #212121;
     text-align: center;
     background-color: var(--light-bg-color);
     border-radius: 4px;
@@ -36,7 +37,8 @@
     transition: background-color var(--animation), color var(--animation), box-shadow var(--animation);
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus {
             background-color: var(--accent-color);
             color: var(--white-color);
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -84,7 +86,8 @@
     outline: 1px solid #eee;
 
     @media screen and (max-width: 1199px) {
-        &:active {
+        &:active,
+        &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
         }
@@ -93,7 +96,8 @@
         width: 354px;
     }    
 
-    &:active .products__overlay {
+    &:active .products__overlay,
+    &:focus .products__overlay {
         transform: translateY(0);
     }
 
