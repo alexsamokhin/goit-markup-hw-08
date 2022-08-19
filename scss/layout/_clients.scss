@@ -3,7 +3,14 @@
 }
 
 .clients__title {
-    @extend %title--fz36;
+    @include fonts(28px, 33px, 700, 0.03em);
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        @include fonts(36px, 42px, 700, 0.03em);
+        margin-bottom: 50px;
+    }
 }
 
 .clients__container {
@@ -14,16 +21,23 @@
     @extend %reset-list;
 
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    --items: 6;
+    --items: 2;
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+    @media screen and (min-width: 1200px) {
+        --items: 6;
+        flex-wrap: nowrap;
+    }
 }
 
 .clients__link {
     @extend %reset-link;
     
     display: flex;
-    width: 170px;
+    width: 210px;
     height: 92px;
 
     justify-content: center;
@@ -34,10 +48,21 @@
 
     transition: color var(--animation), outline var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-        outline: 1px solid var(--accent-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            color: var(--accent-color);
+            outline: 1px solid var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+            outline: 1px solid var(--accent-color);
+        }
     }
 }
 

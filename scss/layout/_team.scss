@@ -4,7 +4,14 @@
 }
 
 .team__title {
-    @extend %title--fz36;
+    @include fonts(28px, 33px, 700, 0.03em);
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        @include fonts(36px, 42px, 700, 0.03em);
+        margin-bottom: 50px;
+    }
 }
 
 .team__container {
@@ -16,8 +23,18 @@
 
     display: flex;
     gap: 30px;
-    --items: 4;
+    --items: 1;
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 1199px) {
+        --items: 2;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .team__item {
@@ -29,7 +46,11 @@
 
 .team__wrapper {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 30px;
+    }
 }
 
 .team__subtitle {
@@ -79,10 +100,19 @@
 
     transition: background-color var(--animation), color var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--white-color);
-        background-color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            color: var(--white-color);
+            background-color: var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            color: var(--white-color);
+            background-color: var(--accent-color);
+        }
     }
 }
 

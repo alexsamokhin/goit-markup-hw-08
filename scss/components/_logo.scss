@@ -1,8 +1,19 @@
 .logo {
     font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
+    // font-weight: 700;
+    // font-size: 26px;
+    // line-height: calc(31 / 26);
+    // letter-spacing: 0.03em;
+    @include fonts(26px, 31px, 700, 0.03em);
     color: #000000;
+
+    @media screen and (max-width: 1199px) {
+        // font-weight: 700;
+        // font-size: 24px;
+        // line-height: 28px;
+        // letter-spacing: 0.03em;
+        font-family: 'Raleway';
+        @include fonts(24px, 28px, 700, 0.03em);
+        color: #000000;
+    }
 }

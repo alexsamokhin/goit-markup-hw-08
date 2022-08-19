@@ -6,11 +6,31 @@
     @extend %container;
 
     display: flex;
+    flex-direction: column;
     padding: 60px 15px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .footer__contacts {
-    margin-right: 70px;
+    @media screen and (max-width: 767px) {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: 61px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+        margin-left: 0;
+        text-align: left;
+    }
 }
 
 .footer__logo--white {
@@ -24,12 +44,12 @@
 
 
 .address {
+    @include fonts(14px, 24px, 400, 0.03em);
     font-style: normal;
-    font-size: 14px;
 }
 
 .address__descr {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     
     // font-weight: 400;
     // font-size: 14px;
@@ -37,6 +57,10 @@
     // letter-spacing: 0.03em;
     @include fonts(14px, 24px, 400, 0.03em);
     color: var(--white-color);
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 9px;
+    }
 }
 
 .address__list {
@@ -46,7 +70,7 @@
 .address__mail {
     @extend %reset-link;
 
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     
     display: inline-block;
     // font-weight: 400;
@@ -57,9 +81,21 @@
 
     transition: color var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--white-color);
+    @media screen and (min-width: 768px) {
+        margin-bottom: 9px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        &:active {
+            color: var(--white-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            color: var(--white-color);
+        }
     }
 }
 
@@ -74,16 +110,36 @@
 
     transition: color var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--white-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            color: var(--white-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            color: var(--white-color);
+        }
     }
 }
 
 .join {
     display: flex;
     flex-direction: column;
-    padding-top: 12px;
+    padding-top: 60px;
+    text-align: center;
+    margin: 0 auto; 
+
+    @media screen and (min-width: 768px) {
+        padding-top: 12px;
+        margin-right: 74px; 
+    }
+
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+        margin: 0;
+    }
 }
 
 .join__title {
@@ -120,10 +176,20 @@
 
     transition: background-color var(--animation), color var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--white-color);
-        background-color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            color: var(--white-color);
+            background-color: var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        &:hover,
+        &:focus {
+            color: var(--white-color);
+            background-color: var(--accent-color);
+        }
     }
 }
 
@@ -134,9 +200,21 @@
 .subscribe {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    padding-top: 60px;
+    
 
-    padding-top: 12px;
-    margin-left: auto;
+    @media screen and (min-width: 768px) {
+        padding-top: 60px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 12px;
+        text-align: left;
+        margin: 0;
+        margin-left: auto;
+    }
 }
 
 .subscribe__title {
@@ -154,12 +232,17 @@
 .subscribe__wrapper {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
 }
 
 .subscribe__mail {
     display: block;
     padding: 15px;
-    width: 358px;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -175,10 +258,28 @@
 
     transition: border-color var(--animation);
 
-    &:hover,
-    &:focus {
-        border-color: var(--white-color);
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 450px;
     }
+
+    @media screen and (max-width: 1199px) {
+        &:active {
+            border-color: var(--white-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+
+        &:hover,
+        &:focus {
+            border-color: var(--white-color);
+        }
+    }
+
+    
+
 }
 
 .subscribe__btn {
@@ -208,9 +309,19 @@
     
     transition: background-color var(--animation);
 
-    &:hover,
-    &:focus {
-        background-color: var(--accent-bg-color);
+    @media screen and (max-width:1199px) {
+        margin-top: 20px;
+
+        &:active {
+            background-color: var(--accent-bg-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            background-color: var(--accent-bg-color);
+        }
     }
 }
 

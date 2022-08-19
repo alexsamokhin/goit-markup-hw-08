@@ -5,6 +5,10 @@
         display: flex;
         gap: 50px;
     }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .nav__list {
@@ -26,9 +30,18 @@
 
     transition: color var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            color: var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
     }
 
     &--current {

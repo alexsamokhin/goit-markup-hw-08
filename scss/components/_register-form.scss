@@ -10,9 +10,13 @@
     // font-size: 20px;
     // line-height: calc(23 / 20);
     // letter-spacing: 0.03em;
-    @include fonts(20px, 23px, 700, 0.03em);
+    @include fonts(20px, 30px, 700, 0.03em);
     text-align: center;
     color: var(--primary-text-color);
+
+    @media screen and (min-width: 1200px) {
+        @include fonts(20px, 23px, 700, 0.03em);
+    }
 }
 
 .register-form__group {
@@ -55,15 +59,27 @@
 
     transition: border-color var(--animation), fill var(--animation);
 
-    &:hover,
-    &:focus {
-        border-color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            border-color: var(--accent-color);
+        }
+
+        &:active + .register-form__icon {
+            fill: var(--accent-color);
+        }
     }
 
-    &:hover + .register-form__icon,
-    &:focus + .register-form__icon {
-        fill: var(--accent-color);
-        }   
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+        }
+
+        &:hover+.register-form__icon,
+        &:focus+.register-form__icon {
+            fill: var(--accent-color);
+        }
+    }
 }
 
 .register-form__message {
@@ -76,9 +92,17 @@
 
     transition: border-color var(--animation);
 
-    &:hover,
-    &:focus {
-        border-color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            border-color: var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+        }
     }
 
     &::placeholder {
@@ -128,8 +152,12 @@
     // font-size: 14px;
     // line-height: calc(24 / 14);
     // letter-spacing: 0.03em;
-    @include fonts(14px, 24px, 400, 0.03em);
+    @include fonts(12px, 14px, 400, 0.03em);
     color: var(--secondary-text-color);
+
+    @media screen and (min-width: 1200px) {
+        @include fonts(14px, 24px, 400, 0.03em);
+    }
 }
 
 .agreement__link {
@@ -161,9 +189,17 @@
 
     transition: background-color var(--animation);
 
-    &:hover,
-    &:focus {
-        background-color: var(--accent-bg-color);
+    @media screen and (max-width: 1199px) {
+        &:active {
+            background-color: var(--accent-bg-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:hover,
+        &:focus {
+            background-color: var(--accent-bg-color);
+        }
     }
 }
 

@@ -1,7 +1,9 @@
 .descr {
     @extend %section;
     
-    padding-bottom: 0;
+    @media screen and (min-width: 1200px) {
+       padding-bottom: 0; 
+    }
 }
 
 .descr__container {
@@ -11,11 +13,32 @@
 .descr__list {
     @extend %reset-list;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 30px;
+
+    @media screen and (min-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        align-items: start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .descr__item {
-    flex-basis: 270px;
+    flex-basis: 226px;
+
+    @media screen and (min-width: 768px) {
+            flex-basis: 354px;
+        }
+
+    @media screen and (min-width: 1200px) {
+            flex-basis: 270px;
+    }
 }
 
 .descr__wrapper {
@@ -24,10 +47,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
+    width: 100%;
     height: 120px;
     background-color: #f5f4fa;
     border-radius: 4px;
+
+    // width: 270px;
+    // height: 120px;
 }
 
 .descr__icon {
@@ -41,8 +67,13 @@
     // font-size: 14px;
     // line-height: calc(16 / 14);
     // letter-spacing: 0.03em;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
     @include fonts(14px, 16px, 700, 0.03em);
     text-transform: uppercase;
+    
 
     margin-bottom: 10px;
 }
@@ -51,6 +82,6 @@
     // font-size: 14px;
     // line-height: calc(24 / 14);
     // letter-spacing: 0.03em;
-    @include fonts(14px, 24px, 400, 0.06em);
+    @include fonts(14px, 24px, 400, 0.03em);
     color: var(--secondary-text-color);
 }

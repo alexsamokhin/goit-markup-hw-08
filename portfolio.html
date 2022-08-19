@@ -29,6 +29,13 @@
         <a class="logo header__logo--black" href="./index.html"
           ><span class="header__logo--inner">Web</span>Studio</a
         >
+
+        <button class="menu__btn" type="button" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -45,7 +52,7 @@
         <ul class="header__contacts-list">
           <li class="header__item">
             <a class="header__mail" href="mailto:info@devstudio.com">
-              <svg class="header__icon" width="16" height="12">
+              <svg class="header__icon header__icon--mail" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -53,7 +60,7 @@
           </li>
           <li class="header__item">
             <a class="header__phone" href="tel:+380961111111">
-              <svg class="header__icon" width="10" height="16">
+              <svg class="header__icon header__icon--phone" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -89,13 +96,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/1.jpg"
-                  alt="проект 1"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/1@1x-lg.jpg 1x, ./images/portfolio/1@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/1@1x-md.jpg 1x, ./images/portfolio/1@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/1@1x-sm.jpg 1x, ./images/portfolio/1@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/1@1x-sm.jpg" alt="проект 1" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -113,13 +128,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/2.jpg"
-                  alt="проект 2"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/2@1x-lg.jpg 1x, ./images/portfolio/2@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/2@1x-md.jpg 1x, ./images/portfolio/2@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/2@1x-sm.jpg 1x, ./images/portfolio/2@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/2@1x-sm.jpg" alt="проект 2" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -137,13 +160,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/3.jpg"
-                  alt="проект 3"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/3@1x-lg.jpg 1x, ./images/portfolio/3@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/3@1x-md.jpg 1x, ./images/portfolio/3@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/3@1x-sm.jpg 1x, ./images/portfolio/3@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/3@1x-sm.jpg" alt="проект 3" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -161,13 +192,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/4.jpg"
-                  alt="проект 4"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/4@1x-lg.jpg 1x, ./images/portfolio/4@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/4@1x-md.jpg 1x, ./images/portfolio/4@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/4@1x-sm.jpg 1x, ./images/portfolio/4@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/4@1x-sm.jpg" alt="проект " />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -185,13 +224,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/5.jpg"
-                  alt="проект 5"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/5@1x-lg.jpg 1x, ./images/portfolio/5@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/5@1x-md.jpg 1x, ./images/portfolio/5@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/5@1x-sm.jpg 1x, ./images/portfolio/5@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/5@1x-sm.jpg" alt="проект 5" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -209,13 +256,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/6.jpg"
-                  alt="проект 6"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/6@1x-lg.jpg 1x, ./images/portfolio/6@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/6@1x-md.jpg 1x, ./images/portfolio/6@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/6@1x-sm.jpg 1x, ./images/portfolio/6@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/6@1x-sm.jpg" alt="проект 6" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -233,13 +288,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/7.jpg"
-                  alt="проект 7"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/7@1x-lg.jpg 1x, ./images/portfolio/7@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/7@1x-md.jpg 1x, ./images/portfolio/7@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/7@1x-sm.jpg 1x, ./images/portfolio/7@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/7@1x-sm.jpg" alt="проект 7" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -257,13 +320,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/8.jpg"
-                  alt="проект 8"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/8@1x-lg.jpg 1x, ./images/portfolio/8@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/8@1x-md.jpg 1x, ./images/portfolio/8@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/8@1x-sm.jpg 1x, ./images/portfolio/8@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/8@1x-sm.jpg" alt="проект 8" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -281,13 +352,21 @@
           <li class="products__item">
             <a class="products__link">
               <div class="products__card">
-                <img
-                  src="./images/portfolio/9.jpg"
-                  alt="проект 9"
-                  class="products__img"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/9@1x-lg.jpg 1x, ./images/portfolio/9@2x-lg.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/9@1x-md.jpg 1x, ./images/portfolio/9@2x-md.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/9@1x-sm.jpg 1x, ./images/portfolio/9@2x-sm.jpg 2x"
+                  />
+                  <img class="products__img" src="./images/portfolio/9@1x-sm.jpg" alt="проект 9" />
+                </picture>
                 <div class="products__overlay">
                   <p class="products__overlay--inner">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -383,5 +462,48 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu menu__overlay" data-menu>
+      <div class="menu__container">
+        <button class="menu__btn" type="button" data-menu-close>
+          <svg class="menu__close-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile__nav">
+          <li class="mobile__item">
+            <a href="./index.html" class="mobile__link">Студия</a>
+          </li>
+          <li class="mobile__item">
+            <a href="./portfolio.html" class="mobile__link">Портфолио</a>
+          </li>
+          <li class="mobile__item">
+            <a href="#" class="mobile__link">Контакты</a>
+          </li>
+        </ul>
+        <div class="mobile-contacts">
+          <a class="mobile-contacts__phone" href="+380961111111">+38 096 111 11 11</a>
+          <a class="mobile-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </div>
+        <ul class="mobile-socilas">
+          <li class="mobile-socilas__item">
+            <a href="" class="mobile-socilas__link">Instagram</a>
+          </li>
+          <li class="mobile-socilas__item">
+            <a href="" class="mobile-socilas__link">Twitter</a>
+          </li>
+          <li class="mobile-socilas__item">
+            <a href="" class="mobile-socilas__link">Facebook</a>
+          </li>
+          <li class="mobile-socilas__item">
+            <a href="" class="mobile-socilas__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
